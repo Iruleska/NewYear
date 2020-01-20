@@ -1,0 +1,98 @@
+/*driver.findElement(By.name("login")).sendKeys("ittest2");
+        driver.findElement(By.name("pass")).sendKeys("337774a");
+        driver.findElement(By.xpath("//input[@tabindex='5']")).click();
+        String text = driver.findElement(By.xpath("//span[@class='sn_menu_title']")).getText();*/
+       // Assert.assertEquals(text,"ittest2@i.ua");
+       // System.out.println();
+       // System.out.println(driver.getCurrentUrl());
+        //System.out.println(driver.getPageSource());
+        //System.out.println(driver.getWindowHandle());
+
+    @Test
+            (dependsOnMethods = {"test3", "test2"}, alwaysRun = true)
+    public void test1()
+    { System.out.println("Test1"); }
+
+    @Test public void test2()
+    { System.out.println("Test2"); Assert.assertTrue(false); }
+
+    @Test(priority = 0) public void test3()
+    { System.out.println("Test3"); }
+
+    @BeforeMethod
+    public void setUp() { System.out.println("BeforeMethod"); }
+
+    @AfterMethod
+    public void tearDown() { System.out.println("AfterMethod"); }
+
+    @BeforeClass
+    public void beforeClass() { System.out.println("BeforeClass"); }
+
+    @AfterClass
+    public void afterClass() { System.out.println("AfterClass"); }
+
+ /* @DataProvider (name = "myDataProvider")
+    public static Object[][] getCandidateLocaleData() {
+        return new Object[][]{{2, 2, 4}, {3, 3, 6}, {4, 6, 8}}; }
+
+        @Test(dataProvider = "myDataProvider")
+        public void testDP(int a, int b, int c) { Assert.assertEquals(a + b, c); }
+
+        @Test(threadPoolSize = 10, invocationCount = 100)
+
+//invocationTimeOut = 1000)
+public void testTimeOut() throws InterruptedException {
+// Thread.sleep(1500);
+System.out.println(Thread.currentThread());
+Assert.assertTrue(true); }
+
+ @Test
+ public void TestGit()
+ { System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+ChromeDriver driver = new ChromeDriver();
+driver.get("https://github.com/");
+Assert.assertEquals("https://github.com/", driver.getCurrentUrl()); driver.quit(); }}
+
+
+
+
+/*package com.it;
+
+import org.testng.Assert;
+import org.testng.annotations.*;
+
+public class MyTest {
+
+    @Test(description = "", dependsOnMethods = {"test3", "test2"}, alwaysRun = true )
+    public void test1() {
+        System.out.println("Test1");
+    }
+        @Test
+    public void test2() {
+            System.out.println("Test2");
+            Assert.assertTrue(false);
+        }
+
+    @Test
+    public void test3() {
+        System.out.println("Test3");
+    }
+        @BeforeMethod
+                public void setUp() {
+            System.out.println("Before method");
+        }
+        @AfterMethod
+    public void tearDown() {
+            System.out.println("After method");
+        }
+    @AfterClass
+    public void afterClass() {
+        System.out.println("After Class");
+    }
+    @BeforeClass
+    public void beforeClass() {
+        System.out.println("Before Class");
+    }
+}*/
+
+
